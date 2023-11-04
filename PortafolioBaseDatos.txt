@@ -1,0 +1,36 @@
+create database portafolio;
+use portafolio;
+
+create table inicio(	
+idInicio int primary key auto_increment,
+  nombre VARCHAR(250),
+  titulo VARCHAR(100),
+  subtitulo VARCHAR(100),
+  contenido VARCHAR(1000),
+  facebook VARCHAR(255),
+  instagram VARCHAR(255), 
+  linkedin VARCHAR(255),
+  github VARCHAR(255),
+  perfil VARCHAR(1000),
+  cv VARCHAR(1000)
+);
+
+create table proyectos(
+	idproyecto int primary key auto_increment,
+    proyectoImagen varchar(1000),
+    tituloProyecto varchar(250),
+    contenidoProyecto varchar(250),
+    github varchar(500),
+    dominio varchar(500)
+);
+
+create table habilidades(
+	idhabilidad int primary key auto_increment,
+    habilidadImagen varchar(1000)
+);
+
+create table usuario(
+	email varchar(500),
+	contra varchar(500)
+);
+insert into usuario(email, contra) values ("prueba@gmail.com", "123");
